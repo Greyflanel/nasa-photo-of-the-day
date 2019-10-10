@@ -8,7 +8,7 @@ const CardContainer = () => {
 
   useEffect(() => {
     axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=edEuQlx4bPExbTdg5g9uWZJ5BCaKGSGuhBhUYxAA&date=1999-10-20`)
+      .get(`https://api.nasa.gov/planetary/apod?api_key=edEuQlx4bPExbTdg5g9uWZJ5BCaKGSGuhBhUYxAA&date=1999-12-05`)
       .then(response => {
         console.log(response.data);
         setPicData(response.data);

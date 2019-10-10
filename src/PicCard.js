@@ -6,12 +6,12 @@ const PicCard = props => {
   console.log(props)
   
   return (
-    <div className="Card">
+    <Card>
       <Title>{props.title}</Title>
       <Date date={props.imageDate}/>
       <Image src={props.imgUrl} alt="Space" />
       <Text>{props.details}</Text>
-    </div>
+    </Card>
   );
 };
 
@@ -19,7 +19,7 @@ const Image = styled.img`
 width: 95%;
 height: 450px;
 border-radius: 5px;
-box-shadow: 4px 5px purple;
+box-shadow: 6px 5px purple;
 `
 const Text = styled.p`
 font-size: small;
@@ -30,4 +30,8 @@ font-size: 2rem;
   margin: 10px;
   color: purple;
 `
+const Card = styled.div`
+margin-top: 50px;
+`
+
 export default PicCard;
