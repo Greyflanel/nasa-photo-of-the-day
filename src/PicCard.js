@@ -1,16 +1,33 @@
 import React from "react";
 import Date from "./Date";
+import styled from "styled-components";
 
-const PetCard = props => {
+const PicCard = props => {
+  console.log(props)
+  
   return (
     <div className="Card">
-      <h1>{props.title}</h1>
-      <Date newDate={props.date}/>
-      <img src={props.imgUrl} alt="Space" />
-      <p>{props.details}</p>
-      
+      <Title>{props.title}</Title>
+      <Date date={props.imageDate}/>
+      <Image src={props.imgUrl} alt="Space" />
+      <Text>{props.details}</Text>
     </div>
   );
 };
 
-export default PetCard;
+const Image = styled.img`
+width: 95%;
+height: 450px;
+border-radius: 5px;
+box-shadow: 4px 5px purple;
+`
+const Text = styled.p`
+font-size: small;
+padding: 10px;
+`
+const Title = styled.h1`
+font-size: 2rem;
+  margin: 10px;
+  color: purple;
+`
+export default PicCard;
