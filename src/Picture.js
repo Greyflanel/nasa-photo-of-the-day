@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import PetCard from './PetCard';
+import PicCard from './PicCard'
 
 const PicList = () => {
 const [picData, setPicData] = useState([]);
@@ -16,7 +16,7 @@ useEffect(() => {
 
 return (
 <div> 
- <PetCard  title={picData.title} imgUrl={picData.hdurl} details={picData.explanation}
+ <PicCard  title={picData.title} imgUrl={picData.hdurl} details={picData.explanation}
  date={picData.date} />
 
 </div>
@@ -24,3 +24,5 @@ return (
 }
 
 export default PicList;
+// import moment from 'moment'
+// let today = moment().format("YYYY-MM-DD");
